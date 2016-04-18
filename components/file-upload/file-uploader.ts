@@ -26,6 +26,7 @@ export class FileUploader {
   constructor(public options:any) {
     // Object.assign(this, options);
     this.url = options.url;
+    this.queueLimit = options.queueLimit;
     this.authToken = options.authToken;
     this.filters.unshift({name: 'queueLimit', fn: this._queueLimitFilter});
     this.filters.unshift({name: 'folder', fn: this._folderFilter});
